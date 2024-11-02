@@ -1,1 +1,39 @@
-do l8r
+public class VehicleData //This class has the methods to add, update, and remove vehicle data
+
+  public String addVehicle(String make, String model, String color, int year, int mileage)
+    IF user input is valid type
+      Add to ArrayList
+      Print "Vehicle added."
+    ELSE
+      Print "Invalid entry. Please try again."
+  End addVehicle
+ 
+  public String removeVehicle(String make, String model, String color, int year, int mileage)
+    IF user input = element in ArrayList
+      Remove from ArrayList
+      Print "Vehicle removed."
+    ELSE
+      Print "Vehicle not found. Please try again."
+  End removeVehicle
+
+  public String updateVehicle(String make, String model, String color, int year, int mileage)
+    Check that user input is valid type  
+    IF user input = element in ArrayList
+      Edit element in ArrayList with new data
+      Print "Vehicle updated."
+    ELSE
+      Print "Vehicle not found. Please try again."
+  End updateVehicle
+
+public class VehicleArray  //This class receives data from the methods in the VehicleData class and stores it in the inventoryList ArrayList.
+
+  private ArrayList<Object> inventoryList
+
+  public String getVehicle(String make, String model, String color, int year, int mileage)
+    Get data from VehicleData ArrayList
+    Add to inventoryList
+  
+    For all elements in inventoryList
+      Print inventoryList elements
+    End For
+  End getVehicle
